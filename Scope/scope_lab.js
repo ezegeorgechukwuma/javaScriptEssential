@@ -27,6 +27,21 @@ function show(){
     }
     show();
     
-    console.log(functionVar); // Throws ReferenceError
-    console.log(functionLet); // Throws ReferenceError
-    console.log(functionConst); // Throws ReferenceError
+//     console.log(functionVar); // Throws ReferenceError
+//     console.log(functionLet); // Throws ReferenceError
+//     console.log(functionConst); // Throws ReferenceError
+
+    {
+        // Block scope
+        var blockVar = "I'm a block-scoped var withing the curly braces";
+        let blockLet = "I'm a block-scoped let withing the curly braces";
+        const blockConst = "I'm a block-scoped const withing the curly braces";
+
+
+        
+        }
+
+
+        console.log(blockLet)
+        console.log(blockConst)
+        console.log(blockVar)
