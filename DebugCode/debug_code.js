@@ -6,10 +6,15 @@
     // Check if inputs are valid numbers
     if (!isNaN(num1) && !isNaN(num2)) {
     // Perform the operation
-                    let result = multiply(num1, num2);
+                    let resultMultiply = multiply(num1, num2);
+                    let resultAdd = add(num1, num2);
+                    let resultDiv = div(num1, num2);
 
                     // Display the result
-                    displayResult(result);
+                    displayResults(num1, num2, resultMultiply, resultAdd, resultDiv);
+                    // displayResult(resultMultiply);
+                    // displayResult(resultAdd);
+                    // displayResult(resultDiv);
                 } else {
                     displayResult('Please enter valid numbers');
                 }
@@ -23,9 +28,31 @@
                 return a * b;
             }
 
+            function add(a,b) {
+                // add numbers
+                return  a + b;
+
+            }
+
+            function div(a, b) {
+                // divide numbers
+                return a / b;
+            }
+
             function displayResult(result) {
                 // Display the result in the paragraph element
                 const resultElement = document.getElementById('result');
                 resultElement.textContent = `The result is: ${result}`;
             }
+
+            function displayResults(num1, num2, resultMultiply, resultAdd, resultDiv) {
+                // Display all calculations in the paragraph element
+                const resultElement = document.getElementById('result');
+                resultElement.innerHTML = `
+                    The result for Addition is: ${num1} + ${num2} = ${resultAdd}<br>
+                    The result for Multiplication: ${num1} × ${num2} = ${resultMultiply}<br>
+                    The result for Division: ${num1} ÷ ${num2} = ${resultDiv}
+                `;
+            }
+
         
