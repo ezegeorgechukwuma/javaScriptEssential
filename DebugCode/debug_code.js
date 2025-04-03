@@ -12,9 +12,6 @@
 
                     // Display the result
                     displayResults(num1, num2, resultMultiply, resultAdd, resultDiv);
-                    // displayResult(resultMultiply);
-                    // displayResult(resultAdd);
-                    // displayResult(resultDiv);
                 } else {
                     displayResult('Please enter valid numbers');
                 }
@@ -38,11 +35,11 @@
                 // divide numbers
                 return a / b;
             }
-
+            //  invalid number result display
             function displayResult(result) {
                 // Display the result in the paragraph element
                 const resultElement = document.getElementById('result');
-                resultElement.textContent = `The result is: ${result}`;
+                resultElement.textContent = `${result}`;
             }
 
             function displayResults(num1, num2, resultMultiply, resultAdd, resultDiv) {
