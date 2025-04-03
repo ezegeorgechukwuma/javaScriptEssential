@@ -12,6 +12,7 @@ function addtask() {
         tasks.push({text:taskText});
         taskInput.value = "";
         displayTasks();
+        // alert the user to input task
     } else {
         alert("please add a task")
     }
