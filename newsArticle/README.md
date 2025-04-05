@@ -1,7 +1,7 @@
-# Health Articles Fetcher
+# News Articles Fetcher
 
 ## Overview
-This project fetches and displays health-related articles from an external JSON API. The webpage dynamically creates and populates HTML elements to present health information in an organized, user-friendly format.
+This project fetches and displays tech-related articles from an external JSON API. The webpage dynamically creates and populates HTML elements to present health information in an organized, user-friendly format.
 
 ## Features
 - Asynchronous data fetching using XMLHttpRequest
