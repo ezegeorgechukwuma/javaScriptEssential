@@ -2,21 +2,50 @@
 <html>
 <head>
   <title>Weather Report</title>
+  <link rel="stylesheet" href="./weather_report.css">
 </head>
 <body>
-   <h1>Weather Report</h1>
-<!-- input fot lat and long -->
-  <form id="weatherForm">
-    <label for="city">Enter latitude:</label>
-    <input type="number" step="any" id="lat" name="lat" placeholder="e.g. 37.7749"><br><br>
-    <label for="city">Enter longitude:</label>
-    <input type="number" step="any" id="lon" name="lon" placeholder="e.g. -122.4194"><br><br>
+    <div class="page-wrapper">
+      <div class="weather-card">
+        <!-- Toggle and Title -->
+        <div class="header-row">
+          <h1>Weather Report</h1>
+          <div class="toggle-wrapper">
+            <label class="switch">
+              <input type="checkbox" id="modeToggle">
+              <span class="slider round"></span>
+            </label>
+          </div>
+        </div>
+  
+        <!-- Form -->
+        <form id="weatherForm">
+          <label for="lat">Enter latitude:</label>
+          <input type="number" step="any" id="lat" name="lat" placeholder="e.g. 37.7749">
+  
+          <label for="lon">Enter longitude:</label>
+          <input type="number" step="any" id="lon" name="lon" placeholder="e.g. -122.4194">
+  
+          <div class="btn-group">
+            <button type="submit">Get Weather</button>
+            <button type="button" id="resetBtn">Reset</button>
+          </div>
+        </form>
+  
+        <!-- Results -->
+        <div id="weatherInfo" class="hidden">
+          <div id="location" class="location"></div>
+          <img id="weatherIcon" class="weather-icon" src="" alt="Weather Icon">
+          <div id="temperature"></div>
+          <div id="description"></div>
+          <div id="localTime" class="local-time"></div>
+          <a id="mapLink" class="map-link" role="button">📍 View on Map</a>
 
-    <button type="submit">Get Weather</button>
-  </form>
-
-  <div id="weatherInfo"></div>
-  <!-- area weather info would be displayed -->
-<script src="./weather_report.js"></script>
-</body>
+        </div>
+      </div>
+    </div>
+  
+    <script src="./weather_report.js"></script>
+  </body>
+  
 </html>
